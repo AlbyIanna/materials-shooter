@@ -4,7 +4,7 @@ To run the game:
 1. Clone the repository or download it as a zip file and extract the internal folder.
 2. Launch unity and click on Open:
     
-    ![image](https://user-images.githubusercontent.com/6939054/48663348-324e1100-ea8f-11e8-81b2-a361aab7225f.png)
+    ![image](https://user-images.githubusercontent.com/6939054/48666268-920fe080-eabe-11e8-9b3b-6781b3e7665f.png)
 
    Then look for the folder named `fps-example` that you just downloaded, open it and wait for Unity to generate the files it needs.
 4. When the project is open, in the menu above click on **Assets > Import Packages > Characters**
