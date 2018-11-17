@@ -11,8 +11,8 @@ To run the game:
 
     ![unity-import-characters](https://user-images.githubusercontent.com/6939054/48663470-eef4a200-ea90-11e8-8b82-9d8262bbceb3.PNG)
 
-    and then click on **Import** in the windows that pops up. This will import all the assets we need to run the game.
-5. Now just in the **Project** tab click on the folder *Scenes* right under *Assets* and double click on the file FloorWithCubes to open the scene. Now you can just click on the **PLAY** button and shoot those cubic assholes!
+    and then click on **Import** in the window that pops up. This will import all the assets we need to run the game.
+5. Finally in the **Project** tab click on the folder *Scenes* right under *Assets* and double click on the file **FloorWithCubes** to open the scene. Now you can just click on the **PLAY** button and shoot those cubic assholes!
 
 ## How it works
 You are just a simple guy with a fancy gun. Let's shoot those punk cubes and turn them green! (I hate cubes)
