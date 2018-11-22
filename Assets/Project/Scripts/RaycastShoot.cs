@@ -6,6 +6,7 @@ public class RaycastShoot : MonoBehaviour {
 	[SerializeField] private Camera _camera;
 	[SerializeField] private int _fireRate = 1;
 	[SerializeField] private int _startingAmmo = 5;
+    [SerializeField] private SelectMaterial selectMaterial;
 
 	private int _currentAmmo;
 	private float _timeToNextShoot;
@@ -26,7 +27,7 @@ public class RaycastShoot : MonoBehaviour {
 			if (Physics.Raycast (_camera.transform.position, _camera.transform.forward, out hitInfo)) {
 				Target t = hitInfo.transform.gameObject.GetComponent<Target>();
 				if (t != null) {
-					t.HitTarget ();
+					t.HitTarget (selectMaterial.materialsColor[selectMaterial.selectedMaterial]);
 				}
 			}
 		}

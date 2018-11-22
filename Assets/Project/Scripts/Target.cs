@@ -8,8 +8,8 @@ public class Target : MonoBehaviour {
 	void Start () {
 	}
 	
-	public void HitTarget() {
-		GetComponent<MeshRenderer> ().material.color = Color.green;
+	public void HitTarget(Color color) {
+		GetComponent<MeshRenderer> ().material.color = color;
 		Destroy (gameObject, 1);
 	}
 }
