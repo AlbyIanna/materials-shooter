@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23165010575872544}
   - component: {fileID: 65566562185313032}
   - component: {fileID: 114548639878318758}
-  - component: {fileID: 114063956781585290}
   m_Layer: 0
   m_Name: TargetCube
   m_TagString: Untagged
@@ -98,20 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114063956781585290
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1710011158287666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa6df9c1628f1e499d87a9a369904c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
-  _fireRate: 1
-  _startingAmmo: 5
 --- !u!114 &114548639878318758
 MonoBehaviour:
   m_ObjectHideFlags: 1

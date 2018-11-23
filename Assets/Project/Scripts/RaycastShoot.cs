@@ -14,13 +14,13 @@ public class RaycastShoot : MonoBehaviour {
 	void Start () {
 		_currentAmmo = _startingAmmo;
 		_timeToNextShoot = 0;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update () {
 		if (Input.GetButton ("Fire1") && Time.time > _timeToNextShoot && _currentAmmo > 0) {
 			_currentAmmo--;
-			Debug.Log (_currentAmmo);
+			Debug.Log ("_currentAmmo: " + _currentAmmo);
 			_timeToNextShoot = Time.time + 1f / _fireRate;
 			RaycastHit hitInfo;
 			if (Physics.Raycast (_camera.transform.position, _camera.transform.forward, out hitInfo)) {
