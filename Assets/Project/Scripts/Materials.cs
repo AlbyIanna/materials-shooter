@@ -1,21 +1,42 @@
 ﻿using UnityEngine;
 
-public enum Material { Earth, Grass, Sticky };
+public enum MaterialType { NoMaterial, Earth, Grass, Sticky };
 
-public static class Materials
+public class Material
 {
-    public static Color getColorByMaterial(Material material)
+    public Color color;
+    protected MaterialType type;
+
+    public Material ()
     {
-        switch (material)
-        {
-            case Material.Earth:
-                return new Color(.55f, .3f, .1f);
-            case Material.Grass:
-                return new Color(0, .5f, 0);
-            case Material.Sticky:
-                return new Color(.8f, .8f, 0);
-            default:
-                return Color.black;
-        }
+        type = MaterialType.NoMaterial;
+        color = Color.black;
+    }
+}
+
+public class Earth : Material
+{
+    public Earth()
+    {
+        type = MaterialType.Earth;
+        color = new Color(.55f, .3f, .1f);
+    }
+}
+
+public class Grass : Material
+{
+    public Grass()
+    {
+        type = MaterialType.Sticky;
+        color = new Color(0, .5f, 0);
+    }
+}
+
+public class Sticky : Material
+{
+    public Sticky()
+    {
+        type = MaterialType.Sticky;
+        color = new Color(.8f, .8f, 0);
     }
 }

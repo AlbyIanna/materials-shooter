@@ -5,26 +5,26 @@ using UnityEngine.UI;
 
 public class SelectMaterial : MonoBehaviour {
     public Image crosshair;
-    public Material selectedMaterial;
+    public Material selected;
 
     // Use this for initialization
     void Start () {
-        selectedMaterial = Material.Earth;
+        selected = new Earth();
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            selectedMaterial = Material.Earth;
+            selected = new Earth();
         } else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            selectedMaterial = Material.Grass;
+            selected = new Grass();
         } else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            selectedMaterial = Material.Sticky;
+            selected = new Sticky();
         }
 
-        crosshair.color = Materials.getColorByMaterial(selectedMaterial);
+        crosshair.color = selected.color;
     }
 }

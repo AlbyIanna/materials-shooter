@@ -39,7 +39,7 @@ public class MaterialShoot : MonoBehaviour {
         _currentAmmo--;
         _timeToNextShoot = Time.time + 1f / _fireRate;
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.GetComponent<MeshRenderer>().material.color = Materials.getColorByMaterial(selectMaterial.selectedMaterial);
+        cube.GetComponent<MeshRenderer>().material.color = selectMaterial.selected.color;
         cube.transform.position = _camera.transform.position + _camera.transform.forward * 2;
         cube.AddComponent<Rigidbody>();
         cube.GetComponent<Rigidbody>().AddForce(_camera.transform.forward * _firePower);

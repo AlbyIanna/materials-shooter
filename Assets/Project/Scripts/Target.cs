@@ -14,6 +14,6 @@ public class Target : MonoBehaviour {
 
     public void HitTarget(Material material)
     {
-        HitTarget(Materials.getColorByMaterial(material));
+        HitTarget(material.color);
     }
 }
