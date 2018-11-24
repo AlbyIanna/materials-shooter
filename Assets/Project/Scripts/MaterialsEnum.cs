@@ -1,1 +1,0 @@
-﻿public enum Material { Earth, Grass, Sticky };

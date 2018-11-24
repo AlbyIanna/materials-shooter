@@ -27,7 +27,7 @@ public class RaycastShoot : MonoBehaviour {
 			if (Physics.Raycast (_camera.transform.position, _camera.transform.forward, out hitInfo)) {
 				Target t = hitInfo.transform.gameObject.GetComponent<Target>();
 				if (t != null) {
-					t.HitTarget (selectMaterial.materialsColor[selectMaterial.selectedMaterial]);
+					t.HitTarget (selectMaterial.selectedMaterial);
 				}
 			}
 		}

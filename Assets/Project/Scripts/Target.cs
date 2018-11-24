@@ -12,4 +12,9 @@ public class Target : MonoBehaviour {
 		GetComponent<MeshRenderer> ().material.color = color;
 		Destroy (gameObject, 1);
 	}
+
+    public void HitTarget(Material material)
+    {
+        HitTarget(Materials.getColorByMaterial(material));
+    }
 }
