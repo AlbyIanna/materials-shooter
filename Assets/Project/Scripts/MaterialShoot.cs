@@ -41,7 +41,10 @@ public class MaterialShoot : MonoBehaviour {
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.GetComponent<MeshRenderer>().material.color = selectMaterial.selected.color;
         cube.transform.position = _camera.transform.position + _camera.transform.forward * 2;
-        cube.AddComponent<Rigidbody>();
-        cube.GetComponent<Rigidbody>().AddForce(_camera.transform.forward * _firePower);
+        Rigidbody rb = cube.AddComponent<Rigidbody>();
+        rb.mass = selectMaterial.selected.density;
+        rb.AddForce(_camera.transform.forward * _firePower);
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+
     }
 }
