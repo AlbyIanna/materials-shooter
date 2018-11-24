@@ -839,7 +839,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 692238368}
-  selectedMaterial: 0
 --- !u!114 &1987333645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,6 +852,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 1987333642}
   _fireRate: 10
-  _firePower: 500
+  _firePower: 5000
   _startingAmmo: 1000
   selectMaterial: {fileID: 1987333644}
