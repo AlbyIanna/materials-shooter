@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FloorWithCubes_Simple.unity
+    guid: d19475b833f09874688057d7425581ed
   m_configObjects: {}

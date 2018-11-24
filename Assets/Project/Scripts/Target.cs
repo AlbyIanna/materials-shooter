@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Target : MonoBehaviour {
-
 	// Use this for initialization
 	void Start () {
 	}
 	
-	public void HitTarget() {
-		GetComponent<MeshRenderer> ().material.color = Color.green;
+	public void HitTarget(Color color) {
+		GetComponent<MeshRenderer>().material.color = color;
 		Destroy (gameObject, 1);
 	}
+
+    public void HitTarget(Material material)
+    {
+        HitTarget(material.color);
+    }
 }
