@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MaterialShoot : MonoBehaviour {
     [SerializeField] private Camera _camera;
@@ -8,6 +9,7 @@ public class MaterialShoot : MonoBehaviour {
     [SerializeField] private int _firePower = 100;
     [SerializeField] private int _startingAmmo = 9999;
     [SerializeField] private SelectMaterial selectMaterial;
+    [SerializeField] private Text PowerText;
 
     private int _currentAmmo;
     private float _timeToNextShoot;
@@ -17,6 +19,7 @@ public class MaterialShoot : MonoBehaviour {
     {
         _currentAmmo = _startingAmmo;
         _timeToNextShoot = 0;
+        PowerText.text = "Power: " + _firePower.ToString();
     }
 
     // Update is called once per frame
@@ -32,6 +35,18 @@ public class MaterialShoot : MonoBehaviour {
         {
             _currentAmmo = _startingAmmo;
         }
+
+        if (Input.GetKeyDown(KeyCode.P)) {
+            _firePower += 1000;
+        }
+    
+        if (Input.GetKeyDown(KeyCode.O)) {
+            _firePower -= 1000;
+        }
+
+        _firePower += (int) Mathf.Floor(Input.mouseScrollDelta.y * 100);
+
+        PowerText.text = "Power: " + _firePower.ToString();
     }
 
     void fireCube()
