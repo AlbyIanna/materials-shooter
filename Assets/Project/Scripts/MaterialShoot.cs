@@ -27,7 +27,7 @@ public class MaterialShoot : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Fire
         if (Input.GetButton("Fire1") && Time.time > _timeToNextShoot && _currentAmmo > 0)
@@ -49,11 +49,10 @@ public class MaterialShoot : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.O)) {
             _firePower -= 1000;
         }
-
+            
         // Increase/Decrease projectile size
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            Debug.Log("shift pressed");
             _projectileScale += Input.mouseScrollDelta.y / 20;
         } else
         // Increase/Decrease fire power
